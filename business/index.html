@@ -156,7 +156,7 @@
                                 مورد نیاز را مشاهده کنید. </p>
                             <pre>
 <span class="key">METHOD:</span> GET
-<span class="key">URL:</span> https://api.vandar.io/v2/business
+<span class="key">URL:</span> https://api.vandar.io/v4/business
                             </pre>
                             <h3 class="sub-title">
                                 نمونه پاسخ دریافتی موفق
@@ -206,8 +206,9 @@
             "<span class="key">city_id</span>":"8-6",
             "<span class="key">mcc_code</span>": "15200002",
             "<span class="key">address</span>": "تهران میدان آزادی",
-            "<span class="key">wallet</span>": 1050,
-            "<span class="key">deductible_amount</span>": "10500",
+            "<span class="key">currency</span>": "IRR",
+            "<span class="key">wallet</span>": 10500000,
+            "<span class="key">deductible_amount</span>": "100000",
             "<span class="key">blocked_amount</span>": 0,
             "<span class="key">avatar</span>": "businesses/avatars/iz3giCpBWyoj7CYoalqulFX3RyQ63CMkbxFvQ5Zn.png",
             "<span class="key">statusBox</span>": {
@@ -303,12 +304,14 @@
                                         <li>city_id : کد مربوطه شهر محل سکونت شما است</li>
                                         <li>mcc_code : کد مربوط به فعالیت کسب و کار شما است</li>
                                         <li>address : آدرس محل سکونت یا شرکت شما است</li>
-                                        <li>wallet : نماینگر مبلغ کیف پول شما در وندار است</li>
+                                        <li>wallet : نماینگر مبلغ کیف پول شما به  در وندار است</li>
                                         <li>deductible_amount : )تنها مربوط به کسب وکار است ). مقدار
-                                            مبلغی که شما در روز میتوانید تسویه بزنید
+                                            مبلغی به  که شما در روز میتوانید تسویه بزنید
                                         </li>
-                                        <li>blocked_amount : مبلغی که توسط پلیس فتا و یا ... بلاک
+                                        <li>blocked_amount : مبلغی به  که توسط پلیس فتا و یا ... بلاک
                                             شده است(تنها مربوط به کسب و کار است ).
+                                        </li>
+                                        <li>currency :واحد پولی برگشت داده شده را مشخص می‌کند
                                         </li>
                                         <li>avatar :عکس مربوط به حساب شخصی شما یا لوگو کسب و کار شما
                                             است
@@ -445,7 +448,7 @@
                                 را بنویسید.</p>
                             <pre>
 <span class="key">METHOD:</span> GET
-<span class="key">URL:</span> https://api.vandar.io/v2/business/{business}
+<span class="key">URL:</span> https://api.vandar.io/v4/business/{business}
                             </pre>
 
                             <h3 class="sub-title">
@@ -468,8 +471,9 @@
             "<span class="key">city_id</span>":"8-6",
             "<span class="key">mcc_code</span>": "15200002",
             "<span class="key">address</span>": "تهران میدان آزادی",
-            "<span class="key">wallet</span>": 1050,
-            "<span class="key">deductible_amount</span>": "10500",
+            "<span class="key">currency</span>"IRR",
+            "<span class="key">wallet</span>": 1050000,
+            "<span class="key">deductible_amount</span>": "100000",
             "<span class="key">blocked_amount</span>": 0,
             "<span class="key">avatar</span>": "businesses/avatars/iz3giCpBWyoj7CYoalqulFX3RyQ63CMkbxFvQ5Zn.png",
             "<span class="key">statusBox</span>": {

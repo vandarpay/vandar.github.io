@@ -735,7 +735,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.vandar.io/v2/business",
+							"raw": "https://api.vandar.io/v4/business",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -769,7 +769,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.vandar.io/v2/business/{business}",
+							"raw": "https://api.vandar.io/v4/business/{business}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -845,7 +845,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.vandar.io/v2/business/{business}/balance",
+							"raw": "https://api.vandar.io/v4/business/{business}/balance",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -881,7 +881,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.vandar.io/v2/business/{business}/transaction?fromDate=980703&toDate=980705&statusKind=transactions&status=succeed&channel=ipg&ref_id=GmshtyjwKSvZX********YSDz954S2cg8Cyckc47&tracking_code=329618&per_page=50",
+							"raw": "https://api.vandar.io/v4/business/{business}/transaction?fromDate=980703&toDate=980705&statusKind=transactions&status=succeed&channel=ipg&ref_id=GmshtyjwKSvZX********YSDz954S2cg8Cyckc47&tracking_code=329618&per_page=50",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -959,7 +959,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.vandar.io/v2.1/business/{business}/settlement",
+							"raw": "https://api.vandar.io/v3/business/{business}/settlement",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1003,7 +1003,7 @@
 							"raw": "{\n\"amount\": 50000,\n\"iban\": \"IR430550011480005587452001\",\n\"track_id\": \"6feb8114-25d5-372e-83e0-23ae783041a9\",\n\"payment_number\": \"123456\",\n\"notify_url\": \"https://yourdomain.com/nofiy_me\",\n\"is_instant\": true\n}"
 						},
 						"url": {
-							"raw": "https://api.vandar.io/v3/business/{business}/settlement/store",
+							"raw": "https://api.vandar.io/v4/business/{business}/settlement/store",
 							"protocol": "https",
 							"host": [
 								"api",

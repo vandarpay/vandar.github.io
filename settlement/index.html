@@ -161,7 +161,7 @@
                         </div>
                         <pre>
 <span class="key">METHOD:</span> GET
-<span class="key">URL:</span> https://api.vandar.io/v2.1/business/{business}/settlement?per_page=10&page=1
+<span class="key">URL:</span> https://api.vandar.io/v3/business/{business}/settlement?per_page=10&page=1
                       </pre>
                       <p>پارامتر {business} همان نام انگلیسی کسب و کاری است که قصد مشاهده‌ی تسویه‌های آن را دارید.</p>
                         <p>per_page(اختیاری): تعداد رکورد اطلاعاتی درخواست تسویه را مشخص میکند </p>
@@ -177,10 +177,10 @@
 {
 "status": 1,
 "data": {
-  "wallet": 26099,
+  "wallet": 260990,
   "blocked_amount": 0,
-  "deductible_amount": 26099,
-  "currency": "Toman",
+  "deductible_amount": 260990,
+  "currency": "IRR",
   "settlements": {
     "data": [
       {
@@ -190,7 +190,8 @@
         "amount": 100000,
         "payment_number": null,
         "status": "CANCELED",
-        "wallet": 160985,
+        "wallet": 1609850,
+        "currency": "IRR",
         "settlement_date": "2020-05-31"
       },
       {
@@ -200,7 +201,8 @@
         "amount": 50000,
         "payment_number": null,
         "status": "DONE",
-        "wallet": 99485,
+        "wallet": 994850,
+        "currency": "IRR",
         "settlement_date": "2020-04-21"
       },
       {
@@ -210,7 +212,8 @@
         "amount": 68000000,
         "payment_number": null,
         "status": "DONE",
-        "wallet": 126485,
+        "wallet": 1264850,
+        "currency": "IRR",
         "settlement_date": "2020-04-21"
       },
       {
@@ -220,7 +223,8 @@
         "amount": 15000000,
         "payment_number": null,
         "status": "CANCELED",
-        "wallet": 43126485,
+        "wallet": 431264850,
+        "currency": "IRR",
         "settlement_date": "2020-04-21"
       },
       {
@@ -230,7 +234,8 @@
         "amount": 5000000,
         "payment_number": null,
         "status": "CANCELED",
-        "wallet": 58126485,
+        "wallet": 581264850,
+        "currency": "IRR",
         "settlement_date": "2020-04-21"
       }
     ],
@@ -261,10 +266,10 @@
                         <li>
                           data: 
                           <ul>
-                            <li>wallet: مبلغ کیف پول کاربر به تومان</li>
+                            <li>wallet: مبلغ کیف پول کاربر </li>
                             <li>blocked_amount: مبلغی که به دستور احکام قضایی در حساب مسدود شده است.</li>
                             <li>deductible_amount: مبلغ قابل برداشت امروز</li>
-                            <li>currency: </li>
+                              <li>currency: :واحد پولی برگشت داده شده را مشخص می‌کند</li>
                             <li>settlements: 
                               <ul>
                                 <li>
@@ -273,11 +278,12 @@
                                     <li>id: شناسه تسویه</li>
                                     <li>iban_id: شناسه یکتای شماره شبا که برای پیگیری شبا در وندار مورد استفاده قرار می گیرد</li>
                                     <li>gateway_transaction_id: شناسه یکتای تسویه که برای پیگیری تسویه از وندار مورد استفاده قرار می‌گیرد.</li>
-                                    <li>amount: مبلغ تسویه به تومان</li>
+                                    <li>amount: مبلغ تسویه به ریال</li>
                                     <li>payment_number: شناسه واریز ثبت شده در هنگام ثبت تسویه</li>
                                     <li>status:  وضعیت تسویه</li>
-                                    <li>wallet: مبلغ کیف پول بعد از انجام این تسویه</li>
-                                    <li>settlement_date: (میلادی) تاریخ انجام تسویه</li>
+                                      <li>wallet: مبلغ کیف پول بعد از انجام این تسویه</li>
+                                      <li>currency: :واحد پولی برگشت داده شده را مشخص می‌کند</li>
+                                      <li>settlement_date: (میلادی) تاریخ انجام تسویه</li>
                                   </ul>
                                 </li>
                                 <li>first: آدرس اولین صفحه</li>
@@ -331,7 +337,7 @@
 
                       <pre>
 <span class="key">METHOD:</span> POST
-<span class="key">URL:</span> https://api.vandar.io/v3/business/{business}/settlement/store
+<span class="key">URL:</span> https://api.vandar.io/v4/business/{business}/settlement/store
                       </pre>
 
                       <p>پارامتر {business} همان نام انگلیسی کسب و کاری است که قصد ثبت تسویه برای آن را دارید.</p>
@@ -385,7 +391,7 @@
                         توضیحات
                       </h3>
                       <ul>
-                          <li>amount (اجباری): مبلغ تراکنش به تومان و بزرگتر یا مساوی 5000 و کوچکتر یا مساوی مبلغ کیف پول</li>
+                          <li>amount (اجباری): مبلغ تراکنش به ریال و بزرگتر یا مساوی 50000 و کوچکتر یا مساوی مبلغ کیف پول</li>
                           <li>iban (اجباری): شماره شبا ای که می خواد پول به آن واریز شود</li>
                           <li>track_id (اجباری): رشته پیگیری که به ازای هر درخواست تسویه بایستی یکتا باشد. پیشنهاد ما استفاده از uuid برای این پارامتر است.</li>
                           <li>payment_number (اختیاری): شناسه واریز شماره ای اختیاری است تا حداکثر ۱۵ رقم.</li>
@@ -429,9 +435,10 @@
         "amount": 100000,
         "amount_toman": 10000,
         "wage_toman": 1000,
+        "wage": 10000,
         "payment_number": null,
         "status": "PENDING",
-        "wallet": 364988,
+        "wallet": 3649880,
         "settlement_date": "2021-05-02",
         "settlement_time": "16:07:32",
         "settlement_date_jalali": "1400\/02\/12",
@@ -464,6 +471,7 @@
                             <li>amount: مبلغ تسویه به ریال</li>
                             <li>amount_toman: مبلغ تسویه به تومان</li>
                             <li>wage_toman:کارمزد مبلغ تسویه به تومان</li>
+                            <li>wage:کارمزد مبلغ تسویه به ریال</li>
                             <li>payment_number: شناسه پرداخت</li>
                             <li>status: وضعیت تسویه</li>
                             <li>wallet: مبلغ باقی مانده کیف پول بعد از تسویه</li>
@@ -534,7 +542,8 @@
       "amount": 100000,
       "payment_number": null,
       "status": "CANCELED",
-      "wallet": 160985,
+      "wallet": 16098500,
+      "currency": "IRR",
       "settlement_date": "2020-05-31"
     }
   }
@@ -552,10 +561,10 @@
                         <li>
                           data:
                           <ul>
-                            <li>wallet: مبلغ کیف پول کاربر به تومان</li>
+                            <li>wallet:  مبلغ کیف پول کاربر به ریال </li>
                             <li>blocked_amount: مبلغی که به دستور احکام قضایی در حساب مسدود شده است.</li>
                             <li>deductible_amount: مبلغ قابل برداشت امروز</li>
-                            <li>currency: </li>
+                            <li>currency: واحد پولی برگشت داده شده را مشخص می‌کند</li>
                             <li>settlements: 
                               <ul>
                                 <li>
@@ -564,7 +573,7 @@
                                     <li>id: شناسه تسویه</li>
                                     <li>iban_id: شناسه یکتای شماره شبا که برای پیگیری شبا در وندار مورد استفاده قرار می گیرد</li>
                                     <li>gateway_transaction_id: شناسه یکتای تسویه که برای پیگیری تسویه از وندار مورد استفاده قرار می‌گیرد.</li>
-                                    <li>amount: مبلغ تسویه به تومان</li>
+                                    <li>amount: مبلغ تسویه به ریال</li>
                                     <li>payment_number: شناسه واریز ثبت شده در هنگام ثبت تسویه</li>
                                     <li>status: وضعیت تسویه</li>
                                     <li>wallet: مبلغ کیف پول بعد از انجام این تسویه</li>
